@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="database" class="cm.proje.db.Database" abstract="true">
+		<property name="username" value="besiraydemir"></property>
+
+		<property name="password" value="123321"></property>
+
+		<property name="properties" >
+
+			<list>
+				<value>1 min connection</value>
+				<value>5 min connection</value>
+			</list>
+		</property>
+
+
+
+	</bean>
+
+
+
+	<bean id="mysqldatabase" class="cm.proje.db.Database"
+		parent="database">
+		<property name="url" value="maysql..dboled"></property>
+
+		<property name="properties">
+			<list merge="true">
+				<value>2 min connection</value>
+				<value>521155 min connection</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="oracle" class="cm.proje.db.Database" parent="database">
+		<property name="url" value="oracledboled"></property>			
+		<property name="properties">
+			<list merge="true">
+				<value>3 min connection</value>
+				<value>777 min connection</value>
+			</list>
+		</property>					
+		
+	</bean>
+
+</beans>

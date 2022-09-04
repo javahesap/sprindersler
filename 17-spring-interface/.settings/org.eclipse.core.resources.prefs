@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/proje/db/iimpl/MysqlDBConnectionImpln.java=UTF-8
+encoding//src/main/java/com/proje/db/iimpl/OracleDBConnectionImpl.java=UTF-8

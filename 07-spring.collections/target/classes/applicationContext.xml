@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="DbConnection"  class="com.proje.db.DbConnection">
+
+<property name="username" value="besir"></property>
+<property name="password" value="123321"></property>
+<property name="List">
+<list>
+<value>min 5 connection</value>
+<value>max 5 connection</value>
+<value>100 stamentn</value>
+</list>
+</property>
+
+<property name="maps"   >
+
+<map>
+<entry key="minkonection" value="5"></entry>
+<entry key="min conection" value="5"></entry>
+<entry key="max catch" value="500"></entry>
+</map>
+
+
+</property>
+<property name="props">
+<props>
+
+<prop key="user">root</prop>
+<prop key="password">123321</prop>
+<prop key="url">mysqlocqhost</prop>
+</props>
+
+
+
+</property>
+
+</bean>
+
+
+</beans>

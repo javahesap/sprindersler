@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+
+<!--    
+<bean id="database"  class="com.proje.db.Database">
+
+<property name="url" value="mysql:localhost8080"></property>
+<property name="username" value="roott"></property>
+<property name="password" value="denemesa"></property>
+
+</bean>
+
+<bean id="DbConnection"  class="com.proje.db.Properties" autowire="byName">
+<property name="properties1" value="min 5 connection"></property>
+<property name="properties2" value="max 20 connection"></property>
+
+</bean>
+<bean id="DbConnection"  class="com.proje.db.DbConnection" autowire="byName"></bean>
+
+-->
+
+<bean   class="com.proje.db.Database">
+
+<property name="url" value="mysql:localhost8080"></property>
+<property name="username" value="roott"></property>
+<property name="password" value="denemesa"></property>
+
+</bean>
+
+<bean  class="com.proje.db.Properties" >
+<property name="property1" value="min 5 connection"></property>
+<property name="property2" value="max 20 connection"></property>
+
+</bean>
+<bean id="DbConnection"  class="com.proje.db.DbConnection" autowire="byType"></bean>
+
+
+
+
+
+
+</beans>

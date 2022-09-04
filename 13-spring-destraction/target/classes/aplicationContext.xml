@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="database" class="cm.proje.db.DbConnection" init-method="validation" destroy-method="closeConnection" >
+		<property name="username" value="sdfsdf"></property>
+		<property name="password" value="sifre"></property>
+		<property name="url" value="localhhost"></property>
+	</bean>
+
+
+
+	
+
+
+
+
+</beans>

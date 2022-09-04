@@ -1,0 +1,23 @@
+package com.prpje.test;
+
+import com.proje.config.AppConfig;
+import com.proje.db.DbConnection;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+
+
+public class TestAnataion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ConfigurableApplicationContext  configurableApplicationContext=new AnnotationConfigApplicationContext(AppConfig.class);
+		 DbConnection dbconnection=configurableApplicationContext.getBean(DbConnection.class);
+		 
+		 dbconnection.openConnection();
+		 dbconnection.closeConnection();
+		 configurableApplicationContext.close();
+	}
+
+}

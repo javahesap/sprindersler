@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean  id="dbConnection"  class="cm.proje.db.DbConnection" >
+<property name="url" value="mysql:localhost8080"></property>
+<property name="username" value="roott"></property>
+<property name="password" value="12345"></property>
+</bean>
+
+
+
+
+<bean  id="dbConnectionname"  class="cm.proje.db.DbConnection" >
+<constructor-arg name="url" value="localhostdbol:80808"></constructor-arg>
+<constructor-arg name="username" value="rootsss"></constructor-arg>
+<constructor-arg name="password" value="ghgjhj"></constructor-arg>
+</bean>
+
+
+<bean  id="dbConnectionindex"  class="cm.proje.db.DbConnection" >
+<constructor-arg index="0" value="localhostdbol:80808"></constructor-arg>
+<constructor-arg index="1" value="rootsssindex"></constructor-arg>
+<constructor-arg index="2" value="ghgjhj"></constructor-arg>
+</bean>
+<bean  id="dbConnectioncustom"  class="cm.proje.db.DbConnection" >
+<constructor-arg index="0" value="localhostdbol:80808"></constructor-arg>
+<constructor-arg index="1" value="rootsssindex"></constructor-arg>
+
+</bean>
+
+
+
+</beans>
